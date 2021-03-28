@@ -7,6 +7,6 @@
 	</head>
 	<body>
 		<a href="Allstudents.php">Allstudents</a>
-		<a href="Adddepartment.php">Adddepartment</a>
+		<a href="Alldepartment.php">Alldepartment</a>
 	</body>
 </html>
