@@ -1,4 +1,5 @@
 <?php
+     require_once 'models/db_config.php';
     $name ="";
     $err_name ="";
     $uname="";
@@ -17,25 +18,39 @@
 		  $name = $_POST["name"];
 	  }
 	  	   if(empty($_POST["uname"])){
-		   $err_uname="Username Required";
-		   $hasError = true;
+			   $hasError = true;
+		      $err_uname="Username Required";
+		   
 	   }
 	   else{
 		   $uname = ($_POST["uname"]);
 	   }
 	  if(empty($_POST["pass"])){
+		  $hasError = true;
 		   $err_pass="Password Required";
-		   $hasError = true;
+		   
 	   }
 	   else{
 		   $pass = ($_POST["pass"]);
 	   }
 	   if(empty($_POST["email"])){
-		   $err_email="Email ID Required";
 		   $hasError = true;
+		   $err_email="Email ID Required";
+		   
 	   }
 	   else{
 		   $pass =($_POST["email"]);
 	   }
+	  
+	  if(!$hasError){
+		  insertUser($name,$uname,$pass,$email);
+		  
 	  }
+  }
+	  function insertUser($name,$uname,$pass,$email){
+		  $query = "INSERT INTO users VALUES (NULL,'$name','$uname','$pass','$email')";
+		  execute($query);
+	  }
+  
+	  
 ?>

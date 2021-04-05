@@ -2,7 +2,7 @@
 	$server="localhost";
 	$user="root";
 	$password="";
-	$db_name="wt_sp21_l";
+	$db_name="dummy 21";
 		
 	function execute($query){
 		global $server,$user,$password,$db_name;

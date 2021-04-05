@@ -1,7 +1,7 @@
 <?php include 'main_header.php'
 
-    require_once "Controllers/SignupController.php";
-;?>
+   require_once 'controller/SignupController.php';
+   ?>
      
 
 <!--sign up starts -->
