@@ -1,5 +1,5 @@
 <?php
-     require_once 'models/db_config.php';
+     require_once'models/db _config.php';
     $name ="";
     $err_name ="";
     $uname="";
@@ -49,6 +49,7 @@
   }
 	  function insertUser($name,$uname,$pass,$email){
 		  $query = "INSERT INTO users VALUES (NULL,'$name','$uname','$pass','$email')";
+		 
 		  execute($query);
 	  }
   

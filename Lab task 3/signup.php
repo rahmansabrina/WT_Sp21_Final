@@ -1,4 +1,4 @@
-<?php include 'main_header.php'
+<?php include 'main_header.php';
 
    require_once 'controller/SignupController.php';
    ?>
